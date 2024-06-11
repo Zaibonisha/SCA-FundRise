@@ -88,6 +88,7 @@ button{
 
 header{
     display: flex;
+    flex-direction: row;
     background: #fff;
     padding: 20px;
     align-items: center;
@@ -105,6 +106,7 @@ header img{
 
 header .navbar a{
     display: inline-flex;
+    flex-direction: column;
     font-size: 20px;
     padding: 25px;
     color: #000;;
@@ -190,10 +192,7 @@ section h3{
     display: flex;
     align-items: center; 
     justify-content: space-between;
-}
-
-.how-it-works p{
-    display: flex;
+    margin: 30px;
 }
 
 h4{
@@ -204,7 +203,10 @@ h4{
 }
 
 footer .img{
-    font-size: 20px;
+    display: flex;
+    font-size: 5px;
+    padding: 10px;
+    margin: 20px;
 }
 
 footer .footer-links{
@@ -214,12 +216,14 @@ footer .footer-links{
     align-items: center;
 }
 
-footer .social_links_wrapper{
+footer .social-links-wrapper{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
     color: #808080;
+    margin: 20px;
 }
 
 footer .social_links_wrapper nav 
@@ -229,14 +233,19 @@ footer .social_links_wrapper nav
     line-height: 1.2;
 }
 
-footer .social_links_wrapper nav ul {
+footer .social_links_wrapper nav ul, li{
     margin: auto;
     padding: 0;
-    list-style-type: none;
+    list-style: none;
     margin-top: revert;
 }
 
-footer .footer_information_title{
+footer .footer_information_title strong{
+    display: inline-flex;
+    flex-direction: column;
+}
+
+footer .footer_information_title p{
     display: block;
 }
 
