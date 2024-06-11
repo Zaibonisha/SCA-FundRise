@@ -146,6 +146,13 @@ section{
     max-width: 100px;
 }
 
+.landing-page ul, li{
+    display: inline-flex;
+    justify-content:space-evenly;
+    padding: auto;
+    margin: auto;
+}
+
 section h1{
     color: #fff;
     font-size: 100px;
@@ -273,8 +280,7 @@ h4{
 
 .landing-page-container h3{
     color: #808080;
-    text-align: center;
-    margin: 20px;
+    margin: 15px;
 }
 
 .landing-page-container p{
@@ -287,17 +293,26 @@ h4{
     width: 180px;
     height: 40px;
     margin: 0 auto;
-    padding: 5px;
+    padding: 10px;
     background: #FB8500;
     color: #fff;
     border-radius: 12px;
     text-transform: none;
     }  
 
+.container .social-links-wrapper{
+    display: flex;
+}
+
+.container hr{
+    background-position: cover;
+}
+
 .urgent-cause{
     box-sizing: content-box;
     color-scheme: #9BA2A4;
-    padding: 20px;
+    padding: 10px;
+    margin: 30px;
 }
 
 .urgent-cause img{
@@ -390,8 +405,13 @@ footer .footer-details{
     color: #808080;
 }
 
+footer .footer-details .vector{
+    width: 20px;
+    height: 15px;
+}
+
 footer .footer-details img{
-    width: 15px;
+    width: 60px;
     height: 20px;
 }
 
