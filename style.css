@@ -155,7 +155,7 @@ section h2{
 
 section h3{
     color: #FB8500;
-    font-size: medium;
+    font-size: 20px;
     text-align: center;
     margin: 20px;
     padding: 40px;
@@ -186,4 +186,9 @@ section h3{
     justify-content: center;
 }
 
-
+h4{
+    color: #023047;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 40px;
+}
