@@ -264,6 +264,47 @@ h4{
     color-scheme: #9BA2A4;
 }
 
+.landing-page-container{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.landing-page-container h3{
+    color: #808080;
+    text-align: center;
+    margin: 20px;
+}
+
+.landing-page-container p{
+    color: #9BA2A4;
+    padding: 10px;
+}
+
+.landing-page-container .btn{
+    text-align: center;
+    width: 180px;
+    height: 40px;
+    margin: 0 auto;
+    padding: 5px;
+    background: #FB8500;
+    color: #fff;
+    border-radius: 12px;
+    text-transform: none;
+    }  
+
+.urgent-cause{
+    box-sizing: content-box;
+    color-scheme: #9BA2A4;
+    padding: 20px;
+}
+
+.urgent-cause img{
+    padding: 20px;
+    justify-items: center;
+}
+
 footer .img{
     font-size: 5px;
     padding: 10px;
@@ -322,6 +363,28 @@ footer .footer-details{
     display: flex;
     justify-content:space-evenly;
     color: #808080;
+}
+
+footer .footer-details img{
+    width: 15px;
+    height: 20px;
+}
+
+footer .footer-socials #confirmation-message{
+    display: flex;
+    gap: 0.2rem;
+    align-items: left;
+    justify-content: left;
+}
+
+footer .footer-socials .btn{
+    width: 180px;
+    height:  40px;
+    display: flex;
+    background: #FB8500;
+    color: #fff;
+    border-radius: 12px;
+    padding: 5px;
 }
 
 
