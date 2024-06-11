@@ -86,12 +86,13 @@ button{
     cursor: pointer;
 }
 
-header{
+nav{
     display: flex;
     flex-direction: row;
     background: #fff;
     padding: 20px;
-    align-items: center;
+    margin: auto;
+    align-items: left;
     justify-content: space-between;
 }
 
@@ -100,22 +101,24 @@ header{
     height: 40px;
 }
 
-header img{
-    font-size: 20px;
+nav img{
+    width: 180px;
+    height: 40px;
 }
 
-header .navbar a{
-    display: inline-flex;
-    flex-direction: column;
-    font-size: 20px;
-    padding: 25px;
+nav a{
+    display: inline-block;
+    flex-direction: row;
+    font-size: 15px;
+    padding: 5px;
     color: #000;
     background: #fff;
     text-decoration: none;
     align-items: center;
+    justify-content: space-evenly;
 }
 
-header .navbar a:hover{
+nav a:hover{
     color: #666;
 }
 
@@ -166,7 +169,7 @@ section h3{
 
 .campaign-btn{
     width: 180px;
-    height:  40px;
+    height: 40px;
     background: #FB8500;
     color: #fff;
     border-radius: 12px;
@@ -201,6 +204,65 @@ h4{
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 40px;
+}
+
+.confirmation-container{
+    display: grid;
+    background: #023046;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.confirmation-container h1{
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+}
+
+.confirmation-container h2{
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+}
+
+.confirmation-container img{
+    padding: 20px;
+    justify-items: center;
+}
+
+.confirmation-container h3{
+    color: #fff;
+    text-align: center;
+    margin: 20px;
+}
+
+.confirmation-container p{
+    color: #fff;
+    padding: 30px;
+}
+
+.confirmation-container .btn{
+    text-align: center;
+    width: 180px;
+    height: 40px;
+    margin: 0 auto;
+    padding: 5px;
+    background: #FB8500;
+    color: #fff;
+    border-radius: 12px;
+    text-transform: none;
+}  
+
+.box-container{
+    display: inline-flex;
+}
+
+.view-container{
+    box-sizing: content-box;
+    background: #E9F8FB;
+    color-scheme: #9BA2A4;
 }
 
 footer .img{
@@ -246,7 +308,7 @@ footer .footer_information_title strong{
 }
 
 footer .footer_information_title p{
-    display: block;
+    justify-content: center;
 }
 
 footer .footer-socials{
