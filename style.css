@@ -16,15 +16,16 @@ body{
     width: 100%;
     display: flex;
     flex-direction: row;
+    height: 100vh;
 
 }
 
-.lhs{
+.s-lhs{
     width: 60%;
     background-image: url(./asset/KIDS-1024x683\ 2\ \(1\).png);
 }
 
-.rhs{
+.s-rhs{
     margin-top: 50px;
     width: 35%;
     display: flex;
@@ -33,12 +34,12 @@ body{
     justify-content: center;
 }
 
-.rhs img{
+.s-rhs img{
     width: 130px;
     height: 150px;
 }
 
-.rhs h2{
+.s-rhs h2{
     font-size: 24px;
     font-weight: 700;
     color: #FB8500;
@@ -506,5 +507,129 @@ footer .footer-socials .btn{
     padding: 5px;
 }
 
+/* Explore campaign */
 
+.header-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    width: 100%;
+    /* padding: 50px 100px 50px 100px; */
+}
 
+.header-container button{
+    width: 400px;
+    height: 60px;
+    background-color: #034563;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.header-container input{
+    width: 600px;
+    height: 60px;
+}
+.cam-header{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    height: auto;
+    width: 100%;
+    padding: 0 100px 0 100px;
+    margin-top: 50px;
+}
+
+.cam-header h3{
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.all-content-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 100px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px 100px 50px 100px;
+}
+
+.content-container{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-container h4{
+    font-size: 22px;
+    font-weight: 600;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.iconandname{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.iconandname i{
+    width: 20px;
+    height: 20px;
+    color: #219EBC;
+}
+
+.iconandname span{
+    font-size: 16px;
+    font-weight: 500;
+    color: #219EBC;
+}
+
+.iconandname p{
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333;
+}
+
+.progress-bar{
+    background-color: #d9d9d9;
+    height: 10px;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+.inner-bar{
+    background-color: #FB5507;
+    height: 10px;
+    width: 50%;
+    border-radius: 6px;
+}
+
+.down-text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.down-text p{
+    font-size: 20px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.down-text button{
+    width: 150px;
+    height: 44px;
+    background-color: #FB8500;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 4px;
+}
