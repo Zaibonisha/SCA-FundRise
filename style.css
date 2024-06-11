@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 
 * {
@@ -8,7 +8,7 @@
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     width: 100vw;
 }
 
@@ -34,8 +34,15 @@ body{
 }
 
 .rhs img{
-    width: 150px;
+    width: 130px;
     height: 150px;
+}
+
+.rhs h2{
+    font-size: 24px;
+    font-weight: 700;
+    color: #FB8500;
+    margin-top: 20px;
 }
 
 
@@ -52,11 +59,18 @@ input {
     padding: 1rem 1.5rem;
     margin-bottom: 1.2rem;
     border-radius: 6px;
-    border: 1px solid #dddddd;
+    border: 1px solid #aaaaaa;
     font-family: inherit;
     font-size: 0.8rem;
     font-weight: 400;
     transition: all 0.2s ease-in-out;
+}
+
+form p{
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 6px;
 }
 
 input.error{
@@ -86,6 +100,66 @@ button{
     cursor: pointer;
 }
 
+/* create campaign */
+
+.bottom-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.campaign-lhs{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #333333;
+}
+
+.campaign-lhs h2{
+    font-size: 32px;
+    color: #FB8500;
+    font-weight: 600;
+    margin-top: 20%;
+    padding: 5%;
+}
+
+.campaign-lhs img{
+    width: auto;
+    margin-top: 50px;
+}
+
+.campaign-rhs{
+    width: 60%;
+    padding: 20px 40px 20px 40px;
+}
+
+.goal-fields{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.goal-fields input{
+    width: 95%;
+}
+
+.bottom-button{
+    width: 100%;
+    display: flex;
+   justify-content: flex-end;
+    
+}
+
+.bottom-button button{
+    width: auto;
+    text-wrap: nowrap;
+    padding: 10px;
+}
+
+/* end of campaign creation */
+
+/* beginning of nav */
 nav{
     display: flex;
     flex-direction: row;
