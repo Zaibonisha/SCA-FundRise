@@ -109,7 +109,8 @@ header .navbar a{
     flex-direction: column;
     font-size: 20px;
     padding: 25px;
-    color: #000;;
+    color: #000;
+    background: #fff;
     text-decoration: none;
     align-items: center;
 }
@@ -203,7 +204,6 @@ h4{
 }
 
 footer .img{
-    display: flex;
     font-size: 5px;
     padding: 10px;
     margin: 20px;
