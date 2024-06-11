@@ -243,8 +243,9 @@ footer .footer_information_title{
 footer .footer-socials{
     display: flex;
     justify-content: right;
+    gap: 1rem;
     margin-top: 20px;
-    padding-right: 5px;
+    padding-right: 15px;
 }
 
 footer .footer-details{
