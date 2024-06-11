@@ -305,10 +305,35 @@ h4{
     justify-items: center;
 }
 
+.payment-container{
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    margin: auto;
+    padding: 15px;
+    margin-left: 10px;
+    justify-content: space-around;
+    align-items: left;
+}
+
+.profile-container{
+    display: block;
+}
+
+.profile-container h2, h3{
+    color: #236795;
+    padding-left: 50px;
+    margin: 10px;
+}
+
+.profile-container img{
+    padding-left: 60px;
+}
+
 footer .img{
     font-size: 5px;
     padding: 10px;
-    margin: 20px;
+    margin: 30px;
 }
 
 footer .footer-links{
