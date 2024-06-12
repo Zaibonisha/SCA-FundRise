@@ -325,9 +325,9 @@ h4{
     padding: 30px;
 }
 
-.confirmation-container .btn{
+.confirmation-container .view-btn{
     text-align: center;
-    width: 180px;
+    width: 160px;
     height: 40px;
     margin: 0 auto;
     padding: 5px;
@@ -335,6 +335,25 @@ h4{
     color: #fff;
     border-radius: 12px;
     text-transform: none;
+}  
+
+footer .confirmation-message p{
+    display: flex;
+    font-size: 18px;
+}
+
+footer .confirmation-message .back-btn{
+    display: flex;
+    text-align: center;
+    width: 170px;
+    height: 40px;
+    margin: 0 auto;
+    padding: 10px;
+    background: #FB8500;
+    color: #fff;
+    border-radius: 12px;
+    text-transform: none;
+    margin-bottom: 20px;
 }  
 
 .box-container{
@@ -503,6 +522,17 @@ h4{
     background: transparent;
     padding: 5px 20px;
     margin: 20px 20px;
+}
+
+.profile-container form .save-btn{
+    width: 120px;
+    height: 40px;
+    padding: 10px 40px;
+    margin: 20px 400px;
+    background: #FB8500;
+    color: #fff;
+    border-radius: 12px;
+    text-transform: none;
 }
 
 .profile-container .details{
@@ -690,11 +720,11 @@ h4{
     height: 20px;
 }
 
-.footer-socials #confirmation-message{
+.footer-socials-cm{
     display: flex;
     gap: 0.2rem;
-    align-items: left;
-    justify-content: left;
+    align-items: end;
+    justify-content: right;
 }
 
 .footer-socials .btn{
