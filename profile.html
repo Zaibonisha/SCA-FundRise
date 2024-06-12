@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile page</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <nav>
@@ -29,39 +30,43 @@
         </div>        
 
         <form action="#">
+            <div class="user">
+                <img src="assets/Frame 24.png" alt="">
+                <button type="submit" class="user-btn">Edit photo</button>
+        </div>
             <div class="form first">
                 <div class="details personal">
 
-                    <span class="title">Personal Details</span>
+                    <span class="title">Personal Information</span>
 
                     <div class="fields">
                     <div class="input-field">
-                        <lable>First Name</lable>
-                        <input type="text" placeholder="Enter your name" required>
+                        <label>First Name</label>
+                        <input type="text" placeholder="Enter your first name" required>
                     </div>
                     <div class="input-field">
-                        <lable>Last Name</lable>
-                        <input type="text" placeholder="Enter your name" required>
+                        <label>Last Name</label>
+                        <input type="text" placeholder="Enter your last name" required>
                     </div>
                     <div class="input-field">
-                        <lable>Email</lable>
-                        <input type="text" placeholder="Enter your name" required>
+                        <label>Email</label>
+                        <input type="text" placeholder="Enter your email" required>
                     </div>
                     <div class="input-field">
-                        <lable>Confirm Password</lable>
-                        <input type="text" placeholder="Enter your name" required>
+                        <label>Confirm Password</label>
+                        <input type="text" placeholder="Enter your password" required>
                     </div>
                     <div class="input-field">
-                        <lable>Country</lable>
-                        <input type="text" placeholder="Enter your name" required>
+                        <label>Country</label>
+                        <input type="text" placeholder="Enter your country" required>
                     </div>
                     <div class="input-field">
-                        <lable>State</lable>
-                        <input type="text" placeholder="Enter your name" required>
+                        <label>State</label>
+                        <input type="text" placeholder="Enter your State" required>
                     </div>
                     </div>
 
-                    <button type="submit" class="btn">Save</button>
+                    <button type="submit" class="save-btn">Save</button>
             </div>
         </form>
     </div>

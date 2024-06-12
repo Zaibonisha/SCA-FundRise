@@ -387,7 +387,9 @@ h4{
 
 .testimonials{
     display: flex;
-    position: absolute;
+    flex-wrap: wrap;
+    flex-direction: column;
+    row-gap: 100%;
     width: 20px;
     min-width: 100vh;
     margin: 10px;
@@ -451,11 +453,11 @@ h4{
 
 .profile-container{
     position: relative;
-    max-width: 900px;
-    width: 100%;
+    max-width: 700px;
+    width: 90%;
     border-radius: 8px;
-    padding: 30px;
-    margin: 0 15px;
+    padding: 10px 50px;
+    margin: 5px 20px;
     background: #FFFFFF;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
@@ -465,6 +467,7 @@ h4{
     font-size: 30px;
     font-weight: 600;
     color: #236795;
+    padding: 20px;
 }
 
 .profile-container header::before{
@@ -481,20 +484,40 @@ h4{
     position: relative;
     margin-top: 16px;
     min-height: 490px;
-    background-color: #d9d9d9;
 }
 
-.profile-container form .details{
+.profile-container form .user{
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+.profile-container form .user-btn{
+    display: flex;
+    color: #FB8500;
+    width: 130px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 25px;
+    border: 1px solid #FB8500;
+    background: transparent;
+    padding: 5px 20px;
+    margin: 20px 20px;
+}
+
+.profile-container .details{
     margin-top: 30px;
+    padding-right: 15px;
+    margin-bottom: 5px;
 }
 
-.profile-container form .title{
+.profile-container form .profile-title{
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-size: 20px;
     font-weight: 500;
-    margin: 10px 0;
-    padding: 6px;
+    margin: 20px;
+    padding: 20px;
     color: #808080;
 }
 
@@ -511,12 +534,12 @@ h4{
     color: #808080;
     gap: 4rem;
     margin: 60px;
-    margin-top: 20px;
+    margin-top: 5px;
     padding-right: 15px;
+    margin-bottom: 5px;
 }
 
-
-form .fields .input-field{
+.fields .input-field{
     display: flex;
     width: calc(100% / 3 - 15px);
     flex-direction: column;
@@ -526,7 +549,7 @@ form .fields .input-field{
 .input-field label{
     font-size: 12px;
     font-weight: 500;
-    color: #fff;
+    color: #797979;
 }
 
 .input-field input{
@@ -551,6 +574,20 @@ form .fields .input-field{
 
 .input-field input[type="state"]{
     color: #808080;
+}
+
+.save-btn{
+    width: 110px;
+    height: 40px;
+    display: flex;
+    position: right;
+    justify-items: right;
+    background: #FB8500;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 12px;
+    padding: 10px 30px;
+    margin: 10px 10px;
 }
 
 .footer .img{
