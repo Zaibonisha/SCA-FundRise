@@ -117,6 +117,54 @@
             </div>
          </div>
         </div>
+        <div class="sign-up-screen">
+            <div class="s-lhs"></div>
+            <div class="s-rhs">
+                <div class="singin-up">
+                <img src="./asset/Frame 13 (1).png" alt="">
+            </div>
+                <h2>Create your Account</h2>
+                <form action="" id="form">
+                    <label for="firstName">
+                         <input type="text" class="firstName" placeholder="Enter your first name" >
+                         <p class="error-message firstName-error hidden">First name can not be empty</p>
+                    </label>
+    
+                    <label for="lastName"> 
+                        <input type="text" class="lastName" placeholder="Enter your last name" >
+                        <p class="error-message lastName-error hidden">Last name can not be empty</p>
+                    </label>
+    
+                    <label for="location"> 
+                        <select id="location" name="country" class="location">
+                            <option value="" selected disabled>Select your location</option>
+                        </select>
+                        <p id="location-error" class="error-message hidden">Please select a location.</p>         
+                    </label>
+    
+                    <label for="emailAddress">
+                         <input type="email" class="email" placeholder="Enter your email address" >
+                         <p class="error-message email-error hidden">Please enter a valid email.</p>
+                    </label>
+    
+                    <label for="Password"> 
+                        <input type="password" class="password" placeholder="Enter your password" >
+                        <p class="error-message password-error hidden">Password cannot be empty.</p>
+                    </label>
+    
+                    <label for="confirmPassword">
+                         <input type="password" class="confpassword" placeholder="Confirm your password" >
+                         <p class="error-message confPassword-error hidden">Password do not match.</p>
+                    </label>
+    
+                    <div class="bottom-cont">
+                        <button type="submit">Sign Up</button>
+                        <p class="bottom-text">Already have an account? <span> Log in</span></p>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
 <hr />
 <br>
 <footer class="footer">

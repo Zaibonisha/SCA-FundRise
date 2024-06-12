@@ -46,6 +46,10 @@ body{
     margin-top: 20px;
 }
 
+.singin-up img{
+    width: 110px;
+    height: 90px;
+}
 
 form {
     background-color: white;
