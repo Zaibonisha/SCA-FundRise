@@ -1,21 +1,20 @@
-import React, { useContext } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Login from "./components/auth/Login";
-import Register from "./components/auth/Register";
-import Customers from "./components/customer/Customers";
-import Home from "./pages/Home";
-import Navbar from "./components/layout/Navbar";
-import AuthContext from "./context/AuthContext";
+// src/Router.js
+import React, { useContext } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Login from './components/auth/Login';
+import Register from './components/auth/Register';
+import LandingPage from './pages/LandingPage'; // Ensure this is the correct path
+import Profile from './pages/Profile'; // Ensure this is the correct path
+import AuthContext from './context/AuthContext';
 
 function Router() {
   const { loggedIn } = useContext(AuthContext);
 
   return (
     <BrowserRouter>
-      <Navbar />
       <Switch>
         <Route exact path="/">
-        <Home />
+          <LandingPage />
         </Route>
         {loggedIn === false && (
           <>
@@ -29,8 +28,8 @@ function Router() {
         )}
         {loggedIn === true && (
           <>
-            <Route path="/customer">
-              <Customers />
+            <Route path="/profile">
+              <Profile />
             </Route>
           </>
         )}
