@@ -220,12 +220,19 @@ nav img{
     height: 40px;
 }
 
+nav input{
+    display: inline-block;
+    color: #797979;
+    border-color: #C5C5C5;
+    padding: 5px;
+}
+
 nav a{
     display: inline-block;
     flex-direction: row;
     font-size: 15px;
     padding: 5px;
-    color: #000;
+    color: #797979;
     background: #fff;
     text-decoration: none;
     align-items: center;
@@ -510,14 +517,13 @@ footer .confirmation-message .back-btn{
 }
 
 .profile-container{
-    position: relative;
-    max-width: 700px;
+    max-width: 900px;
     width: 90%;
     border-radius: 8px;
     padding: 10px 50px;
-    margin: 5px 20px;
+    margin: 5px 100px;
     background: #FFFFFF;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .profile-container header{
@@ -539,6 +545,8 @@ footer .confirmation-message .back-btn{
 }
 
 .profile-container form{
+    display: inline-block;
+    flex-direction: column;
     position: relative;
     margin-top: 16px;
     min-height: 490px;
@@ -609,6 +617,10 @@ footer .confirmation-message .back-btn{
     margin-bottom: 5px;
 }
 
+.fields{
+    display: flex;
+}
+
 .fields .input-field{
     display: flex;
     flex-direction: column;
@@ -619,16 +631,19 @@ footer .confirmation-message .back-btn{
 } 
 
 .input-field label{
+    display: flex;
+    margin-bottom: 5px;
     font-size: 12px;
     font-weight: 500;
     color: #797979;
+    text-decoration-color: #797979;
 }
 
 .input-field input, select{
     outline: none;
     font-size: 14px;
     font-weight: 400;
-    color: #fff;
+    color: #797979;
     border-radius: 8px;
     border: 1px solid #E3E3E3;
     padding: 0 15px;
@@ -670,10 +685,10 @@ footer .confirmation-message .back-btn{
     margin: 10px 10px;
 }
 
-.footer .img{
-    font-size: 5px;
-    padding: 10px;
-    margin: 30px;
+.footer img{
+    font-size: 10px;
+    padding: 5px;
+    margin: 10px;
 }
 
 .footer{
@@ -695,16 +710,22 @@ footer .confirmation-message .back-btn{
 }
 
 .footer-col{
-    width: 30%;
-    padding: 20px;
-    margin: auto;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content:space-between;
+    width: 5px;
+    padding: 5px 5px;
+    margin: 5px auto;
 }
 
 .footer-col h4{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
     color: #808080;
-    font-size: 18px;
+    font-size: 16px;
     text-transform: capitalize;
-    margin-bottom: 30px;
+    margin: 10px 5px;
     font-weight: 500;
     position: relative;
 }
@@ -756,18 +777,23 @@ footer .confirmation-message .back-btn{
 
 .footer-details{
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-around;
     color: #808080;
 }
 
 .footer-details .vector{
-    width: 20px;
-    height: 15px;
+    display: flex;
+    width: 30px;
+    height: 40px;
 }
 
 .footer-details img{
-    width: 60px;
-    height: 20px;
+    display: flex;
+    width: 80px;
+    height: 30px;
+    margin: 5px 5px;
+    padding: 5px 5px;
+    justify-content: space-between;
 }
 
 .footer-socials-cm{
