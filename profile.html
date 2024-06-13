@@ -11,7 +11,7 @@
     <nav>
         <img src="assets/Group 8.png" alt="" />
         <input type="text" class="search-box" placeholder="Search" />
-        <a href="#Donate">Campaigns</a>
+        <a href="#Campaigns">Campaigns</a>
         <button type="submit" class="btn">Create a Campaign</button>
         <img src="assets/Group 50.png" alt="" />
     </nav>
@@ -23,10 +23,10 @@
         <header>Profile</header>
 
         <div class="profile-details">
-            <span>Personal</span>
-            <span>Account</span>
-            <span>Payment</span>
-            <span>Notification</span>
+            <a href="#Personal"> <span>Personal</span> </a>
+            <a href="#Account"> <span>Account</span> </a>
+            <a href="#Payment"> <span>Payment</span> </a>
+            <a href="#Notification"> <span>Notification</span> </a>
         </div>        
 
         <form action="#">
@@ -41,29 +41,45 @@
 
                     <div class="fields">
                     <div class="input-field">
-                        <label>First Name</label>
+                        <label for="first name">First Name</label>
                         <input type="text" placeholder="Enter your first name" required>
                     </div>
                     <div class="input-field">
-                        <label>Last Name</label>
+                        <label for="last name">Last Name</label>
                         <input type="text" placeholder="Enter your last name" required>
                     </div>
                     <div class="input-field">
-                        <label>Email</label>
+                        <label for="email">Email</label>
                         <input type="text" placeholder="Enter your email" required>
                     </div>
                     <div class="input-field">
-                        <label>Confirm Password</label>
+                        <label for="confrim password">Confirm Password</label>
                         <input type="text" placeholder="Enter your password" required>
                     </div>
                     <div class="input-field">
-                        <label>Country</label>
-                        <input type="text" placeholder="Enter your country" required>
+                        <label for="country">Country</label>
+                        <select id="country" onchange="populateState()">
+                            <option value="country"> Select Country</option>
+                            <option value="south africa"> South Africa</option>
+                            <option value="nigeria"> Nigeria</option>
+                            <option value="cameroon"> Cameroon</option>
+                            <option value="uk"> UK</option>
+                            <option value="usa"> Australia</option>
+                            <option value="thailand"> Thailand</option>
+
+                        </select>
                     </div>
                     <div class="input-field">
-                        <label>State</label>
-                        <input type="text" placeholder="Enter your State" required>
-                    </div>
+                        <label for="state">State</label>
+                        <select id="state" onchange="populateCity()">
+                            <option value="country"> Select State</option>
+                            <option value="south africa"> Western Cape</option>
+                            <option value="nigeria"> Lagos</option>
+                            <option value="cameroon"> Yaunde</option>
+                            <option value="uk"> Kent</option>
+                            <option value="usa"> Sydney</option>
+                            <option value="thailand"> Thailand</option>
+                        </select>
                     </div>
 
                     <button type="submit" class="save-btn">Save</button>

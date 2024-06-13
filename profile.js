@@ -1,12 +1,12 @@
 import React from 'react';
 
-const ProfilePage = () => {
+const profile = () => {
     return (
         <div>
             <nav>
                 <img src="assets/Group 8.png" alt="" />
                 <input type="text" className="search-box" placeholder="Search" />
-                <a href="#Donate">Campaigns</a>
+                <a href="#Campaigns">Campaigns</a>
                 <button type="submit" className="btn">Create a Campaign</button>
                 <img src="assets/Group 50.png" alt="" />
             </nav>
@@ -15,10 +15,10 @@ const ProfilePage = () => {
             <div className="profile-container">
                 <header>Profile</header>
                 <div className="profile-details">
-                    <span>Personal</span>
-                    <span>Account</span>
-                    <span>Payment</span>
-                    <span>Notification</span>
+                    <a href=""> <span>Personal</span> </a>
+                    <a href=""> <span>Account</span> </a>
+                    <a href=""> <span>Payment</span> </a>
+                    <a href=""> <span>Notification</span> </a>
                 </div>
                 <form action="#">
                     <div className="user">
@@ -63,4 +63,4 @@ const ProfilePage = () => {
     );
 }
 
-export default ProfilePage;
+export default profile;

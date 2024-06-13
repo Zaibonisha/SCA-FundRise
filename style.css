@@ -316,8 +316,20 @@ section h3{
 .how-it-works{
     display: flex;
     align-items: center; 
-    justify-content: space-between;
-    margin: 30px;
+    justify-content: space-around;
+    margin: 20px 60px;
+}
+
+.urgent-cause{
+    box-sizing: content-box;
+    color-scheme: #9BA2A4;
+    padding: 5px;
+    margin: 20px;
+}
+
+.urgent-cause img{
+    padding: 20px;
+    justify-items: center;
 }
 
 h4{
@@ -443,22 +455,24 @@ footer .confirmation-message .back-btn{
     margin: 0 auto;
 }
 
-.testimonials{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    row-gap: 100%;
-    width: 20px;
-    min-width: 100vh;
-    margin: 10px;
+.testimonials img{
+    height: 10px;
+    width: 100%;
     padding: 10px;
-    left: 20px;
+    margin: 20px;
+    align-items: center;
 }
 
-.testimonials img{
-    height: 20px;
-    padding: 20px;
-    margin: 20px;
+.testimonials-container h4{
+    color: #388DA8;
+}
+
+.text-box{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 100px;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .text-box p{
@@ -468,14 +482,12 @@ footer .confirmation-message .back-btn{
     padding: 10px;
 }
 
-.testimonials-container h4{
-    color: #388DA8;
-}
-
-.text-box h5{
+.text-box p span{
     color: #FB8500;
     font-size: 10px;
-    justify-content: left;
+    justify-content: end;
+    padding: 150px;
+    margin: 10px;
 }
 
 .container .social-links-wrapper{
@@ -484,18 +496,6 @@ footer .confirmation-message .back-btn{
 
 .container hr{
     background-position: cover;
-}
-
-.urgent-cause{
-    box-sizing: content-box;
-    color-scheme: #9BA2A4;
-    padding: 10px;
-    margin: 30px;
-}
-
-.urgent-cause img{
-    padding: 20px;
-    justify-items: center;
 }
 
 .payment-container{
@@ -581,7 +581,7 @@ footer .confirmation-message .back-btn{
 }
 
 .profile-container form .profile-title{
-    display: block;
+    display: flex;
     margin-bottom: 10px;
     font-size: 20px;
     font-weight: 500;
@@ -590,16 +590,17 @@ footer .confirmation-message .back-btn{
     color: #808080;
 }
 
-.profile-container form .fields{
+.profile-container .fields{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .profile-details{
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
+    align-items: center;
     color: #808080;
     gap: 4rem;
     margin: 60px;
@@ -610,9 +611,11 @@ footer .confirmation-message .back-btn{
 
 .fields .input-field{
     display: flex;
-    width: calc(100% / 3 - 15px);
     flex-direction: column;
-    margin: 4px 0;
+    column-gap: 15px;
+    justify-content: left;
+    width: 60%;
+    margin: 10px;
 } 
 
 .input-field label{
@@ -621,7 +624,7 @@ footer .confirmation-message .back-btn{
     color: #797979;
 }
 
-.input-field input{
+.input-field input, select{
     outline: none;
     font-size: 14px;
     font-weight: 400;
@@ -631,6 +634,14 @@ footer .confirmation-message .back-btn{
     padding: 0 15px;
     height: 41px;
     margin: 8px 0;
+}
+
+.input-field select{
+    font-size: 14px;
+    font-weight: 500;
+    color: #A8A8A8;
+    margin: 8px 0;
+    padding: 0 15px;
 }
 
 .input-field input:is(:focus, :valid){
