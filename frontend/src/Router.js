@@ -1,14 +1,17 @@
-// src/Router.js
 import React, { useContext } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
-import LandingPage from './pages/LandingPage'; // Ensure this is the correct path
-import Profile from './pages/Profile'; // Ensure this is the correct path
+import LandingPage from './pages/LandingPage';
+import Profile from './pages/Profile';
 import AuthContext from './context/AuthContext';
 
 function Router() {
-  const { loggedIn } = useContext(AuthContext);
+  const { loggedIn, loading } = useContext(AuthContext);
+
+  if (loading) {
+    return <div>Loading...</div>; // Optional: Show a loading indicator
+  }
 
   return (
     <BrowserRouter>
@@ -16,23 +19,16 @@ function Router() {
         <Route exact path="/">
           <LandingPage />
         </Route>
-        {loggedIn === false && (
-          <>
-            <Route path="/register">
-              <Register />
-            </Route>
-            <Route path="/login">
-              <Login />
-            </Route>
-          </>
-        )}
-        {loggedIn === true && (
-          <>
-            <Route path="/profile">
-              <Profile />
-            </Route>
-          </>
-        )}
+        <Route path="/register">
+          <Register />
+        </Route>
+        <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="/profile">
+          <Profile />
+        </Route>
+        <Redirect to="/" /> {/* Redirect to the LandingPage if no matching route */}
       </Switch>
     </BrowserRouter>
   );

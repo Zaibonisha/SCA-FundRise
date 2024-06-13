@@ -31,7 +31,7 @@ function Register() {
       };
 
       // Make POST request to register endpoint
-      await axios.post("http://localhost:8000/api/users", registerData);
+      await axios.post("http://localhost:5000/api/users", registerData);
 
       // After successful registration, update logged in status
       await getLoggedIn();

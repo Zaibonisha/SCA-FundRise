@@ -21,9 +21,9 @@ function Login() {
         password,
       };
 
-      await axios.post("http://localhost:8000/api/users/login", loginData);
+      await axios.post("http://localhost:5000/api/users/login", loginData);
       await getLoggedIn();
-      history.push("/");
+      history.push("/dashboard"); // Redirect to a dashboard or home page after login
     } catch (err) {
       console.error("Login failed:", err);
       setError("Invalid email or password");
