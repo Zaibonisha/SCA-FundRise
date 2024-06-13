@@ -1,66 +1,87 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Group8 from '../assets/Group 8.png';
+import Group50 from '../assets/Group 50.png';
+import Frame24 from '../assets/Frame 24.png';
 
-const profile = () => {
-    return (
-        <div>
-            <nav>
-                <img src="assets/Group 8.png" alt="" />
-                <input type="text" className="search-box" placeholder="Search" />
-                <a href="#Campaigns">Campaigns</a>
-                <button type="submit" className="btn">Create a Campaign</button>
-                <img src="assets/Group 50.png" alt="" />
-            </nav>
-            <hr />
-            <br />
-            <div className="profile-container">
-                <header>Profile</header>
-                <div className="profile-details">
-                    <a href=""> <span>Personal</span> </a>
-                    <a href=""> <span>Account</span> </a>
-                    <a href=""> <span>Payment</span> </a>
-                    <a href=""> <span>Notification</span> </a>
-                </div>
-                <form action="#">
-                    <div className="user">
-                        <img src="assets/Frame 24.png" alt="" />
-                        <button type="submit" className="user-btn">Edit Photo</button>
-                    </div>
-                    <div className="form first">
-                        <div className="details personal">
-                            <span className="title">Personal Information</span>
-                            <div className="fields">
-                                <div className="input-field">
-                                    <label>First Name</label>
-                                    <input type="text" placeholder="Enter your first name" required />
-                                </div>
-                                <div className="input-field">
-                                    <label>Last Name</label>
-                                    <input type="text" placeholder="Enter your last name" required />
-                                </div>
-                                <div className="input-field">
-                                    <label>Email</label>
-                                    <input type="text" placeholder="Enter your email" required />
-                                </div>
-                                <div className="input-field">
-                                    <label>Password</label>
-                                    <input type="password" placeholder="Enter your password" required />
-                                </div>
-                                <div className="input-field">
-                                    <label>Country</label>
-                                    <input type="text" placeholder="Enter your country" required />
-                                </div>
-                                <div className="input-field">
-                                    <label>State</label>
-                                    <input type="text" placeholder="Enter your State" required />
-                                </div>
-                            </div>
-                            <button type="submit" className="save-btn">Save</button>
-                        </div>
-                    </div>
-                </form>
+const Profile = ({ section }) => {
+  const renderSection = () => {
+    switch (section) {
+      case 'personal':
+        return (
+          <div className="details personal">
+            <span className="title">Personal Information</span>
+            <div className="fields">
+              <div className="input-field">
+                <label>First Name</label>
+                <input type="text" placeholder="Enter your first name" required />
+              </div>
+              <div className="input-field">
+                <label>Last Name</label>
+                <input type="text" placeholder="Enter your last name" required />
+              </div>
+              <div className="input-field">
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email" required />
+              </div>
+              <div className="input-field">
+                <label>Password</label>
+                <input type="password" placeholder="Enter your password" required />
+              </div>
+              <div className="input-field">
+                <label>Country</label>
+                <input type="text" placeholder="Enter your country" required />
+              </div>
+              <div className="input-field">
+                <label>State</label>
+                <input type="text" placeholder="Enter your state" required />
+              </div>
             </div>
-        </div>
-    );
-}
+            <button type="submit" className="save-btn">Save</button>
+          </div>
+        );
+      case 'account':
+        return <div>Account Information</div>;
+      case 'payment':
+        return <div>Payment Information</div>;
+      case 'notification':
+        return <div>Notification Settings</div>;
+      default:
+        return null;
+    }
+  };
 
-export default profile;
+  return (
+    <div>
+      <nav>
+        <img src={Group8} alt="Logo" />
+        <input type="text" className="search-box" placeholder="Search" />
+        <Link to="/campaigns">Campaigns</Link>
+        <button type="submit" className="btn">Create a Campaign</button>
+        <img src={Group50} alt="User" />
+      </nav>
+      <hr />
+      <br />
+      <div className="profile-container">
+        <header>Profile</header>
+        <div className="profile-details">
+          <Link to="/profile/personal"><span>Personal</span></Link>
+          <Link to="/profile/account"><span>Account</span></Link>
+          <Link to="/profile/payment"><span>Payment</span></Link>
+          <Link to="/profile/notification"><span>Notification</span></Link>
+        </div>
+        <form>
+          <div className="user">
+            <img src={Frame24} alt="User" />
+            <button type="button" className="user-btn">Edit Photo</button>
+          </div>
+          <div className="form first">
+            {renderSection()}
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default Profile;
