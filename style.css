@@ -512,6 +512,103 @@ footer .confirmation-message .back-btn{
     background-position: cover;
 }
 
+.payment-container{
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    padding: 120px;
+    justify-content: space-around;
+    border-radius: 8px;
+    padding: 10px 50px;
+    margin: 5px 300px;
+}
+
+.payment-header img h2{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.payment-details h3{
+    font-size: 14px;
+    padding: 5px;
+}
+
+.first-row{
+    display: flex;
+}
+
+.owner{
+    width: 100%;
+    margin-right: 40px;
+}
+
+.input-payment{
+    border: #808080;
+}  
+
+.amount{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.amount h3{
+    font-size: 14px;
+}
+
+.amount input{
+    width: 40%;
+    padding: 5px;
+}
+
+.amount select{
+    width: 20%;
+    height: 30px;
+    margin: 5px;
+}
+
+.input-payment input{
+    width: 90%;
+    padding: 5px;
+}
+
+.selection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selection select{
+    padding: 10px 20px;
+}
+
+a{
+    background-color: #FB8500;
+    color: #fff;
+    text-align: right;
+    text-decoration: none;
+    padding: 5px;
+    margin: 10px 200px;
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+a:hover{
+    background-color: #fff;
+    color: #FB8500;
+    border-color: #FB8500;
+    border: #FB5507;
+    border-radius: 17px;
+}
+
+.cards img{
+    width: 40px;
+    margin: 10px;
+}
+
 .profile-container{
     max-width: 900px;
     width: 90%;

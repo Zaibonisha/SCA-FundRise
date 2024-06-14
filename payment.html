@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav>
+        <img src="assets/Group 8.png" alt="" />
+        <input type="text" class="search-box" placeholder="Search" />
+        <a href="#Campaigns">Campaigns</a>
+        <button type="submit" class="btn">Create a Campaign</button>
+        <img src="assets/Group 50.png" alt="" />
+    </nav>
+    <hr />
+    <br>
+    <div class="payment-container">
+        <div class="payment-header">
+            <img src="assets/back-button.png" alt="">
+        <img src="assets/istockphoto.png" alt="">
+        <h2>Help build a new school in Nakuru, Kenya</h2>
+        </div>
+        <div class="amount">
+            <h3>Donation Amount</h3>
+            <input type="text" placeholder="Donation Amount" required>
+            <select title="currency" name="currency" id="currency">
+                <option value="ZAR"></option>
+                <option value="NGN"></option>
+                <option value="USD"></option>
+            </select>
+        </div>
+        <div class="payment-details">
+            <div class="first-row">
+                <div class="owner">
+                    <h3>Owner</h3>
+                    <div class="input-payment">
+                        <input type="text" placeholder="Account Holder" required>
+                    </div>
+                    <div class="cvv">
+                        <h3>CVV</h3>
+                        <div class="input-payment">
+                            <input type="text" placeholder="cvv number" required>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="second-row">
+            <div class="card-number">
+                <h3>Card Number</h3>
+                <div class="input-payment">
+                    <input type="text" placeholder="Card Number" required>
+                </div>
+        </div>
+    </div>
+    <div class="third-row">
+        <div class="card-number">
+            <h3>Expiry Date</h3>
+            <div class="selection">
+                <div class="date">
+                    <select title="months" name="months" id="months">
+                        <option value="Jan"></option>
+                        <option value="Feb"></option>
+                        <option value="Mar"></option>
+                        <option value="Apr"></option>
+                        <option value="May"></option>
+                        <option value="Jun"></option>
+                        <option value="Jul"></option>
+                        <option value="Aug"></option>
+                        <option value="Sep"></option>
+                        <option value="Oct"></option>
+                        <option value="Nov"></option>
+                        <option value="Dec"></option>
+                    </select>
+                    <select title="years" name="years" id="years">
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                    </select>
+                </div>
+                <div class="cards">
+                    <img src="assets/logos_mastercard.png" alt="">
+                    <img src="assets/logos_visa.png" alt="">
+                </div>
+            </div>
+    </div>
+    <br>
+    <a href="">Pay securely</a>
+</div>
+    </div>
+    
+    <script src="./payment.js"></script>
+</body>
+</html>
