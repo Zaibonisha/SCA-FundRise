@@ -1,41 +1,50 @@
 import React, { useState } from 'react';
+import './campaign.css';
+import campaignImage from '../asset/Mask group (1).png';
 import axios from 'axios';
 
 function Campaign() {
-  const [campaignData, setCampaignData] = useState({
+  const initialCampaignData = {
     campaignTitle: '',
     campaignDesc: '',
-    currency: 'USD',
-    targetAmount: '10000',
-    startDate: '2024-06-15',
-    endDate: '2024-07-15',
+    goal: {
+      currency: 'USD',
+      targetAmount: '10000',
+      startDate: '2024-06-15',
+      endDate: '2024-07-15',
+    },
     category: 'Fundraising',
-    coverImage: null,
     location: 'JHB, SA'
-  });
+  };
+
+  const [campaignData, setCampaignData] = useState({ ...initialCampaignData });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setCampaignData({ ...campaignData, [name]: value });
-  };
-
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    setCampaignData({ ...campaignData, coverImage: file });
+    if (name === 'currency' || name === 'targetAmount' || name === 'startDate' || name === 'endDate') {
+      setCampaignData({
+        ...campaignData,
+        goal: {
+          ...campaignData.goal,
+          [name]: value
+        }
+      });
+    } else {
+      setCampaignData({ ...campaignData, [name]: value });
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const formData = new FormData();
-      formData.append('title', campaignData.campaignTitle);
-      formData.append('description', campaignData.campaignDesc);
-      formData.append('goal[currency]', campaignData.currency);
-      formData.append('goal[targetAmount]', campaignData.targetAmount);
-      formData.append('goal[startDate]', campaignData.startDate);
-      formData.append('goal[endDate]', campaignData.endDate);
+      formData.append('campaignTitle', campaignData.campaignTitle);
+      formData.append('campaignDesc', campaignData.campaignDesc);
+      formData.append('goal[currency]', campaignData.goal.currency);
+      formData.append('goal[targetAmount]', campaignData.goal.targetAmount);
+      formData.append('goal[startDate]', campaignData.goal.startDate);
+      formData.append('goal[endDate]', campaignData.goal.endDate);
       formData.append('category', campaignData.category);
-      formData.append('coverImage', campaignData.coverImage);
       formData.append('location', campaignData.location);
 
       const response = await axios.post('http://localhost:5000/api/campaigns/create', formData, {
@@ -46,6 +55,9 @@ function Campaign() {
 
       console.log('Campaign created:', response.data);
 
+      // Reset form fields to initial values after successful submission
+      setCampaignData({ ...initialCampaignData });
+
       // Optionally, show a success message or redirect to another page
     } catch (error) {
       console.error('Error creating campaign:', error);
@@ -54,45 +66,126 @@ function Campaign() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Campaign Title:
-        <input type="text" name="campaignTitle" value={campaignData.campaignTitle} onChange={handleChange} />
-      </label>
-      <label>
-        Campaign Description:
-        <input type="text" name="campaignDesc" value={campaignData.campaignDesc} onChange={handleChange} />
-      </label>
-      <label>
-        Goal Currency:
-        <input type="text" name="currency" value={campaignData.currency} onChange={handleChange} />
-      </label>
-      <label>
-        Target Amount:
-        <input type="text" name="targetAmount" value={campaignData.targetAmount} onChange={handleChange} />
-      </label>
-      <label>
-        Start Date:
-        <input type="date" name="startDate" value={campaignData.startDate} onChange={handleChange} />
-      </label>
-      <label>
-        End Date:
-        <input type="date" name="endDate" value={campaignData.endDate} onChange={handleChange} />
-      </label>
-      <label>
-        Category:
-        <input type="text" name="category" value={campaignData.category} onChange={handleChange} />
-      </label>
-      <label>
-        Cover Image:
-        <input type="file" name="coverImage" onChange={handleFileChange} />
-      </label>
-      <label>
-        Location:
-        <input type="text" name="location" value={campaignData.location} onChange={handleChange} />
-      </label>
-      <button type="submit">Create Campaign</button>
-    </form>
+    <div>
+      <nav></nav>
+      <div className="bottom-container">
+        <div className="campaign-lhs">
+          <h2>Let's Kickstart Your Fundraising Journey!</h2>
+          <img src={campaignImage} alt="Campaign" />
+        </div>
+
+        <div className="campaign-rhs">
+          <form id="form" onSubmit={handleSubmit}>
+            <label htmlFor="campaignTitle">
+              <p>Campaign Title</p>
+              <input
+                type="text"
+                className="campaignTitle"
+                name="campaignTitle"
+                value={campaignData.campaignTitle}
+                onChange={handleChange}
+                placeholder="Enter your campaign title"
+                required
+              />
+            </label>
+
+            <label htmlFor="campaignDesc">
+              <p>Campaign Description</p>
+              <input
+                type="text"
+                className="campaignDesc"
+                name="campaignDesc"
+                value={campaignData.campaignDesc}
+                onChange={handleChange}
+                placeholder="Enter your campaign description"
+                required
+              />
+            </label>
+
+            <p>Goal</p>
+            <div className="goal-fields">
+              <label htmlFor="currency">
+                <input
+                  type="text"
+                  className="currency"
+                  name="currency"
+                  value={campaignData.goal.currency}
+                  onChange={handleChange}
+                  placeholder="Currency"
+                  required
+                />
+              </label>
+
+              <label htmlFor="targetAmount">
+                <input
+                  type="text"
+                  className="targetAmount"
+                  name="targetAmount"
+                  value={campaignData.goal.targetAmount}
+                  onChange={handleChange}
+                  placeholder="Target amount"
+                  required
+                />
+              </label>
+
+              <label htmlFor="startDate">
+                <input
+                  type="date"
+                  className="startDate"
+                  name="startDate"
+                  value={campaignData.goal.startDate}
+                  onChange={handleChange}
+                  placeholder="Enter your start date"
+                  required
+                />
+              </label>
+
+              <label htmlFor="endDate">
+                <input
+                  type="date"
+                  className="endDate"
+                  name="endDate"
+                  value={campaignData.goal.endDate}
+                  onChange={handleChange}
+                  placeholder="Enter your end date"
+                  required
+                />
+              </label>
+            </div>
+
+            <label htmlFor="category">
+              <p>Category</p>
+              <input
+                type="text"
+                className="category"
+                name="category"
+                value={campaignData.category}
+                onChange={handleChange}
+                placeholder="Select category"
+                required
+              />
+            </label>
+
+            <label htmlFor="location">
+              <p>Location</p>
+              <input
+                type="text"
+                className="location"
+                name="location"
+                value={campaignData.location}
+                onChange={handleChange}
+                placeholder="Enter your location"
+                required
+              />
+            </label>
+
+            <div className="bottom-button">
+              <button type="submit">Create Campaign</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   );
 }
 

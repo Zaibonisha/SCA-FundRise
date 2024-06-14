@@ -17,7 +17,7 @@ import VectorInstagram from '../assets/vector-instagram.png';
 import Vector from '../assets/vector.png';
 import GooglePlay from '../assets/google-play.png';
 import GoogleStore from '../assets/google-store.png';
-import joinedHands from '../assets/joined-hands.png';
+import joinedHands from '../assets/business-teamwork.png';
 
 function LandingPage() {
   return (
@@ -41,8 +41,8 @@ function LandingPage() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <div className="d-flex align-items-center"> {/* Container for links */}
             <div className="mr-1"> {/* Increase margin between links */}
-              <Link className="nav-link campaigns-link" to="/campaigns">
-                Campaigns
+              <Link className="nav-link campaigns-link" to="/campaign">
+                Create Campaign
               </Link>
             </div>
             <div className="mr-4"> {/* Increase margin between links */}
@@ -65,11 +65,7 @@ function LandingPage() {
                 Profile
               </Link>
             </div>
-            <div className="mr-4"> {/* Increase margin between links */}
-              <Link className="nav-link campaigns-link" to="/campaign">
-                Campaign
-              </Link>
-            </div>
+            
           </div>
 
           <div className="ml-auto"> {/* Right-aligned content */}
@@ -81,7 +77,7 @@ function LandingPage() {
                 aria-label="Search"
               />
               <div className="input-group-append">
-                <button className="bottom-cont" type="button">
+              <button type="button" className="campaign-btn button-style">
                   Search
                 </button>
               </div>
@@ -90,7 +86,18 @@ function LandingPage() {
         </div>
       </nav>
 
-      <img src={joinedHands} alt="Kids" className="kids-image" />
+      <div className="position-relative">
+        <img src={joinedHands} alt="Kids" className="kids-image" />
+
+        <div className="absolute-buttons">
+          <button type="submit" className="campaign-btn button-style">
+            Create a Campaign
+          </button>
+          <button type="submit" className="explore-btn button-style">
+            Explore Campaigns
+          </button>
+        </div>
+      </div>
 
       <section>
         <h3>THE WORLD'S LEADING CROWDFUNDING PLATFORM</h3>
@@ -104,10 +111,10 @@ function LandingPage() {
         <br />
 
         <div className="page-buttons">
-          <button type="submit" className="campaign-btn">
+          <button type="submit" className="campaign-btn button-style">
             Create a Campaign
           </button>
-          <button type="submit" className="explore-btn">
+          <button type="submit" className="explore-btn button-style">
             Explore Campaigns
           </button>
         </div>
@@ -149,7 +156,7 @@ function LandingPage() {
 
             <p>$0 raised of the $5,000 goal</p>
 
-            <button type="submit" className="btn">
+            <button type="submit" className="btn button-style">
               View Campaign
             </button>
           </div>

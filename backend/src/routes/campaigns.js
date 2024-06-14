@@ -10,13 +10,13 @@ router.post('/create', async (req, res) => {
       description,
       goal, // Since goal is an object, destructure its properties
       category,
-      coverImage,
       location
     } = req.body;
 
     // Destructure goal properties
     const { currency, targetAmount, startDate, endDate } = goal;
 
+    // Create a new Campaign object
     const newCampaign = new Campaign({
       title,
       description,
@@ -27,9 +27,13 @@ router.post('/create', async (req, res) => {
         endDate
       },
       category,
-      coverImage,
       location
     });
+
+    // Check if coverImage exists in req.body before assigning
+    if (req.body.coverImage) {
+      newCampaign.coverImage = req.body.coverImage;
+    }
 
     const savedCampaign = await newCampaign.save();
     res.status(201).json(savedCampaign);

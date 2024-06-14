@@ -10,7 +10,7 @@ const campaignSchema = new mongoose.Schema({
     endDate: { type: Date, required: true },
   },
   category: { type: String, required: true },
-  coverImage: { type: String, required: true },
+  coverImage: { type: String }, // Making coverImage optional by removing 'required: true'
   location: { type: String, required: true },
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now }

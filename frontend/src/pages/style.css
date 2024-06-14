@@ -2,7 +2,7 @@
 
 /* Navbar Styles */
 .navbar {
-    background-color: #007bff; /* Blue color */
+    background-color: whitesmoke; /* Blue color */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -20,7 +20,7 @@
 }
 
 .search-box {
-    width: 150px;
+    width: 100%;
 }
 
 /* Custom margin for Campaigns link */
@@ -31,7 +31,7 @@
 /* Collapse Navbar Styles */
 @media (max-width: 991.98px) {
     .navbar-collapse {
-        background-color: #007bff; /* Blue color */
+        background-color: white; /* Blue color */
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         padding: 10px;
     }
@@ -79,3 +79,67 @@
     font-weight: 600;
     cursor: pointer;
 }
+.custom-navbar-toggler {
+    background-color: #FB8500;
+    border: none; /* Optional: Removes button border */
+    font-size: 16px; /* Set font size */
+    /* Add any other styles you need */
+  }
+  .button-style {
+    display: block;
+    border-radius: 6px;
+    width: 50%;
+    height: 50px;
+    padding: 0.6rem 0;
+    background-color: #FB8500;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: inherit;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+  }
+  .position-relative {
+    position: relative;
+  }
+  
+  .absolute-buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .kids-image {
+    width: 100%; /* Adjust width as needed */
+    max-width: 100%; /* Adjust max-width as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: auto;
+  }
+  
+  .button-style {
+    display: block;
+    border-radius: 6px;
+    width: 100%;
+    height: 50px;
+    padding: 0.6rem 0;
+    background-color: #FB8500;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: inherit;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+  }
+  
+  
