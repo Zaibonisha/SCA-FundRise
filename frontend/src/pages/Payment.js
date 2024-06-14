@@ -12,12 +12,13 @@ const Payment = () => {
   return (
     <div>
       <nav>
-        <img src={logo} alt="Logo" />
-        <input type="text" className="search-box" placeholder="Search" />
-        <a href="#Campaigns">Campaigns</a>
-        <button type="submit" className="btn">Create a Campaign</button>
-        <img src={userIcon} alt="User Icon" />
-      </nav>
+      <img src={logo} alt="Logo" />
+      <input type="text" className="search-box" placeholder="Search" />
+      
+      <a href="/campaign" className="btn">Create a Campaign</a>
+      <img src={userIcon} alt="User Icon" />
+     </nav>
+
       <hr />
       <br />
       <div className="payment-container">
