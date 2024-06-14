@@ -2,7 +2,7 @@
 
 ## Description
 
-Simple MERN authentication app 
+Fundraising app
 
 ## Installation
 
