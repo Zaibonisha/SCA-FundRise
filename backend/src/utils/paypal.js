@@ -33,10 +33,11 @@ const createPayPalCustomer = async ({ email }) => {
 };
 
 // Function to attach a payment method to a PayPal customer
-const attachPayPalPaymentMethod = async ({ customer, id }) => {
+const attachPayPalPaymentMethod = async ({ email }) => {
   try {
-    // Implement your logic here to attach a payment method to a PayPal customer
-    // This might involve making requests to PayPal's API
+    const customer = await createPayPalCustomer({ email });
+    // The customer object can be extended to include additional payment method details
+    return customer.payer;
   } catch (error) {
     console.error("Error attaching payment method to PayPal customer:", error);
     throw error;

@@ -5,6 +5,8 @@ import Register from './components/auth/Register';
 import LandingPage from './pages/LandingPage';
 import Profile from './pages/Profile';
 import AuthContext from './context/AuthContext';
+import Campaign from './pages/Campaign';
+
 
 function Router() {
   const { loggedIn, loading } = useContext(AuthContext);
@@ -17,7 +19,7 @@ function Router() {
     <BrowserRouter>
       <Switch>
         <Route exact path="/">
-          <LandingPage />
+          < LandingPage />
         </Route>
         <Route path="/register">
           <Register />
@@ -25,10 +27,14 @@ function Router() {
         <Route path="/login">
           <Login />
         </Route>
+        <Route path="/campaign">
+          <Campaign />
+        </Route>
         <Route path="/profile">
           <Profile />
         </Route>
         <Redirect to="/" /> {/* Redirect to the LandingPage if no matching route */}
+        
       </Switch>
     </BrowserRouter>
   );

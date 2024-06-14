@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .bottom-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .campaign-lhs {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .campaign-lhs img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .campaign-rhs {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .campaign-rhs form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .campaign-rhs label {
+    margin-bottom: 10px;
+  }
+  
+  .goal-fields {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .goal-fields label {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .goal-fields label:last-child {
+    margin-right: 0;
+  }
+  
+  .bottom-button {
+    margin-top: 20px;
+  }
+  
+  .bottom-button button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .bottom-button button:hover {
+    background-color: #0056b3;
+  }
+  .campaign-lhs img {
+    width: 100%;
+    height: auto;
+  }
+  
+  

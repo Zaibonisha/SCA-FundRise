@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './style.css';
+import './style.css'; // Import your CSS file
 
+// Import your images here
 import Group8 from '../assets/Group 8.png';
 import Heart from '../assets/heart.png';
 import Edit from '../assets/edit.png';
@@ -21,87 +22,94 @@ import joinedHands from '../assets/joined-hands.png';
 function LandingPage() {
   return (
     <div className="container">
-  <nav >
-  <Link className="navbar-brand" to="/">
-    <img src={Group8} alt="Logo" />
-  </Link>
-  <button
-    className="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span className="navbar-toggler-icon"></span>
-  </button>
+      <nav className="navbar">
+        <Link className="navbar-brand" to="/">
+          <img src={Group8} alt="Logo" />
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-  <div className="collapse navbar-collapse" id="navbarSupportedContent">
-    <div className="d-flex align-items-center"> {/* Container for links */}
-      <div className="mr-1"> {/* Increase margin between links */}
-        <Link className="nav-link campaigns-link" to="/campaigns">
-          Campaigns
-        </Link>
-      </div>
-      <div className="mr-4"> {/* Increase margin between links */}
-        <Link className="nav-link campaigns-link" to="/about">
-          About
-        </Link>
-      </div>
-      <div className="mr-4"> {/* Increase margin between links */}
-        <Link className="nav-link campaigns-link" to="/login">
-          Log In
-        </Link>
-      </div>
-      <div> {/* No margin needed after the last link */}
-        <Link className="nav-link campaigns-link" to="/register">
-          Register
-        </Link>
-      </div>
-      <div> {/* No margin needed after the last link */}
-        <Link className="nav-link campaigns-link" to="/profile">
-          Profile
-        </Link>
-      </div>
-    </div>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <div className="d-flex align-items-center"> {/* Container for links */}
+            <div className="mr-1"> {/* Increase margin between links */}
+              <Link className="nav-link campaigns-link" to="/campaigns">
+                Campaigns
+              </Link>
+            </div>
+            <div className="mr-4"> {/* Increase margin between links */}
+              <Link className="nav-link campaigns-link" to="/about">
+                About
+              </Link>
+            </div>
+            <div className="mr-4"> {/* Increase margin between links */}
+              <Link className="nav-link campaigns-link" to="/login">
+                Log In
+              </Link>
+            </div>
+            <div> {/* No margin needed after the last link */}
+              <Link className="nav-link campaigns-link" to="/register">
+                Register
+              </Link>
+            </div>
+            <div> {/* No margin needed after the last link */}
+              <Link className="nav-link campaigns-link" to="/profile">
+                Profile
+              </Link>
+            </div>
+            <div className="mr-4"> {/* Increase margin between links */}
+              <Link className="nav-link campaigns-link" to="/campaign">
+                Campaign
+              </Link>
+            </div>
+          </div>
 
-    <div className="ml-auto"> {/* Right-aligned content */}
-      <div className="input-group">
-        <input
-          className="form-control search-box"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
-        <div className="input-group-append">
-          <button
-            className="bottom-cont"
-            type="button"
-          >
-            Search
-          </button>
+          <div className="ml-auto"> {/* Right-aligned content */}
+            <div className="input-group">
+              <input
+                className="form-control search-box"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <div className="input-group-append">
+                <button className="bottom-cont" type="button">
+                  Search
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</nav>
-
-
-
+      </nav>
 
       <img src={joinedHands} alt="Kids" className="kids-image" />
 
       <section>
         <h3>THE WORLD'S LEADING CROWDFUNDING PLATFORM</h3>
-        <h1><strong>Together,</strong></h1>
+        <h1>
+          <strong>Together,</strong>
+        </h1>
         <h2>We can make a difference.</h2>
 
-        <br /><br /><br />
+        <br />
+        <br />
+        <br />
 
         <div className="page-buttons">
-          <button type="submit" className="campaign-btn">Create a Campaign</button>
-          <button type="submit" className="explore-btn">Explore Campaigns</button>
+          <button type="submit" className="campaign-btn">
+            Create a Campaign
+          </button>
+          <button type="submit" className="explore-btn">
+            Explore Campaigns
+          </button>
         </div>
       </section>
 
@@ -131,16 +139,19 @@ function LandingPage() {
           <img src={MaskGroup} alt="Mask Group" />
           <div className="urgent-cause">
             <h3>Mutual Aid for 5 displaced families in Yemen</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris.</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+            </p>
 
             <img src={Group43} alt="Group 43" />
 
             <p>$0 raised of the $5,000 goal</p>
 
-            <button type="submit" className="btn">View Campaign</button>
+            <button type="submit" className="btn">
+              View Campaign
+            </button>
           </div>
         </div>
       </div>
@@ -163,30 +174,58 @@ function LandingPage() {
             <div className="footer-col">
               <h4>Fundraise for</h4>
               <ul>
-                <li><a href="#">Medical</a></li>
-                <li><a href="#">Emergency</a></li>
-                <li><a href="#">Memorial</a></li>
-                <li><a href="#">Education</a></li>
-                <li><a href="#">Nonprofit</a></li>
-                <li><a href="#">Crisis Relief</a></li>
+                <li>
+                  <a href="#">Medical</a>
+                </li>
+                <li>
+                  <a href="#">Emergency</a>
+                </li>
+                <li>
+                  <a href="#">Memorial</a>
+                </li>
+                <li>
+                  <a href="#">Education</a>
+                </li>
+                <li>
+                  <a href="#">Nonprofit</a>
+                </li>
+                <li>
+                  <a href="#">Crisis Relief</a>
+                </li>
               </ul>
             </div>
             <div className="footer-col">
               <h4>Learn more</h4>
               <ul>
-                <li><a href="#">How fundraise works</a></li>
-                <li><a href="#">Why fundraise</a></li>
-                <li><a href="#">Common questions</a></li>
-                <li><a href="#">Success stories</a></li>
+                <li>
+                  <a href="#">How fundraise works</a>
+                </li>
+                <li>
+                  <a href="#">Why fundraise</a>
+                </li>
+                <li>
+                  <a href="#">Common questions</a>
+                </li>
+                <li>
+                  <a href="#">Success stories</a>
+                </li>
               </ul>
             </div>
             <div className="footer-col">
               <h4>Resources</h4>
               <ul>
-                <li><a href="#">Contact us</a></li>
-                <li><a href="#">Help center</a></li>
-                <li><a href="#">Blogs</a></li>
-                <li><a href="#">Fundraise stories</a></li>
+                <li>
+                  <a href="#">Contact us</a>
+                </li>
+                <li>
+                  <a href="#">Help center</a>
+                </li>
+                <li>
+                  <a href="#">Blogs</a>
+                </li>
+                <li>
+                  <a href="#">Fundraise stories</a>
+                </li>
               </ul>
             </div>
           </div>
