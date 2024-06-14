@@ -9,9 +9,9 @@ function LogOutBtn() {
   const history = useHistory();
 
   async function logOut() {
-    // await axios.get("http://localhost:8000/api/users/logout");
+    // await axios.get("http://localhost:5000/api/users/logout");
     await axios.get(
-      "http://localhost:8000/api/users/logout"
+      "http://localhost:5000/api/users/logout"
     );
     await getLoggedIn();
     history.push("/");
