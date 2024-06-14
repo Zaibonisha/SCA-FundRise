@@ -1,41 +1,32 @@
-const { Router } = require('express');
+const express = require('express');
+const router = express.Router();
 const Campaign = require('../models/campaignModel');
 
-const router = Router();
-
+// POST /api/campaigns/create
 router.post('/create', async (req, res) => {
   try {
     const {
-      title,
-      description,
-      goal, // Since goal is an object, destructure its properties
+      campaignTitle,
+      campaignDesc,
+      goal,
       category,
-      location
+      location,
+      coverImage // If included in request
     } = req.body;
-
-    // Destructure goal properties
-    const { currency, targetAmount, startDate, endDate } = goal;
 
     // Create a new Campaign object
     const newCampaign = new Campaign({
-      title,
-      description,
-      goal: { // Assign goal as an object with its properties
-        currency,
-        targetAmount,
-        startDate,
-        endDate
-      },
+      campaignTitle,
+      campaignDesc,
+      goal,
       category,
-      location
+      location,
+      coverImage // Optional: Assign cover image if provided
     });
 
-    // Check if coverImage exists in req.body before assigning
-    if (req.body.coverImage) {
-      newCampaign.coverImage = req.body.coverImage;
-    }
-
+    // Save the new campaign to MongoDB
     const savedCampaign = await newCampaign.save();
+
     res.status(201).json(savedCampaign);
   } catch (error) {
     console.error('Error creating campaign:', error);

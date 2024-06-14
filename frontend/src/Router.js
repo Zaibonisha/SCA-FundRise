@@ -6,6 +6,8 @@ import LandingPage from './pages/LandingPage';
 import Profile from './pages/Profile';
 import AuthContext from './context/AuthContext';
 import Campaign from './pages/Campaign';
+import Payment from './pages/Payment';
+import Paypal from './pages/Paypal';
 
 
 function Router() {
@@ -19,7 +21,7 @@ function Router() {
     <BrowserRouter>
       <Switch>
         <Route exact path="/">
-          < LandingPage />
+        <LandingPage />
         </Route>
         <Route path="/register">
           <Register />
@@ -29,6 +31,12 @@ function Router() {
         </Route>
         <Route path="/campaign">
           <Campaign />
+        </Route>
+        <Route path="/payment">
+          <Payment />
+        </Route>
+        <Route path="/paypal">
+          <Paypal />
         </Route>
         <Route path="/profile">
           <Profile />

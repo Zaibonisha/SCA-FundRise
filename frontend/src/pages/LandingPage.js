@@ -65,6 +65,11 @@ function LandingPage() {
                 Profile
               </Link>
             </div>
+            <div> {/* No margin needed after the last link */}
+              <Link className="nav-link campaigns-link" to="/payment">
+                Payment
+              </Link>
+            </div>
             
           </div>
 

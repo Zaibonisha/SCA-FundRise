@@ -21,15 +21,18 @@ function Campaign() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    if (name === 'currency' || name === 'targetAmount' || name === 'startDate' || name === 'endDate') {
+    if (name.startsWith('goal.')) {
+      // Handle nested goal object fields
+      const goalField = name.split('.')[1]; // Extract the field name after 'goal.'
       setCampaignData({
         ...campaignData,
         goal: {
           ...campaignData.goal,
-          [name]: value
+          [goalField]: value
         }
       });
     } else {
+      // Handle top-level fields
       setCampaignData({ ...campaignData, [name]: value });
     }
   };
@@ -37,22 +40,7 @@ function Campaign() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const formData = new FormData();
-      formData.append('campaignTitle', campaignData.campaignTitle);
-      formData.append('campaignDesc', campaignData.campaignDesc);
-      formData.append('goal[currency]', campaignData.goal.currency);
-      formData.append('goal[targetAmount]', campaignData.goal.targetAmount);
-      formData.append('goal[startDate]', campaignData.goal.startDate);
-      formData.append('goal[endDate]', campaignData.goal.endDate);
-      formData.append('category', campaignData.category);
-      formData.append('location', campaignData.location);
-
-      const response = await axios.post('http://localhost:5000/api/campaigns/create', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data'
-        }
-      });
-
+      const response = await axios.post('http://localhost:5000/api/campaigns/create', campaignData);
       console.log('Campaign created:', response.data);
 
       // Reset form fields to initial values after successful submission
@@ -108,7 +96,7 @@ function Campaign() {
                 <input
                   type="text"
                   className="currency"
-                  name="currency"
+                  name="goal.currency"
                   value={campaignData.goal.currency}
                   onChange={handleChange}
                   placeholder="Currency"
@@ -120,7 +108,7 @@ function Campaign() {
                 <input
                   type="text"
                   className="targetAmount"
-                  name="targetAmount"
+                  name="goal.targetAmount"
                   value={campaignData.goal.targetAmount}
                   onChange={handleChange}
                   placeholder="Target amount"
@@ -132,7 +120,7 @@ function Campaign() {
                 <input
                   type="date"
                   className="startDate"
-                  name="startDate"
+                  name="goal.startDate"
                   value={campaignData.goal.startDate}
                   onChange={handleChange}
                   placeholder="Enter your start date"
@@ -144,7 +132,7 @@ function Campaign() {
                 <input
                   type="date"
                   className="endDate"
-                  name="endDate"
+                  name="goal.endDate"
                   value={campaignData.goal.endDate}
                   onChange={handleChange}
                   placeholder="Enter your end date"
