@@ -1,16 +1,19 @@
 import React from 'react';
-import './style.css'; // Import the CSS file for styling
+import './cardstyles.css'; // Import the CSS file for styling
 
-const longCard = ({ image, title, description }) => {
+const LongCard = ({ image, title, description }) => {
   return (
     <div className="rectangle-card">
-      <img src={image} alt={title} className="rectangle-card-image" />
       <div className="rectangle-card-content">
-        <h3>{title}</h3>
-        <p>{description}</p>
+        <img src={image} alt={title} className="rectangle-card-image" /> {/* Image on the left */}
+        <div className="card-text">
+          <h3>{title}</h3>
+          <p>{description}</p>
+          <button className="card-button">Donate now</button> {/* Button below description */}
+        </div>
       </div>
     </div>
   );
 };
 
-export default longCard;
+export default LongCard;

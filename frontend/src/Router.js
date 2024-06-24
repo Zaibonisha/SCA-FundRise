@@ -9,7 +9,6 @@ import Campaign from './pages/Campaign';
 import Payment from './pages/Payment';
 import Paypal from './pages/Paypal';
 
-
 function Router() {
   const { loggedIn, loading } = useContext(AuthContext);
 
@@ -21,7 +20,7 @@ function Router() {
     <BrowserRouter>
       <Switch>
         <Route exact path="/">
-        <LandingPage />
+          <LandingPage />
         </Route>
         <Route path="/register">
           <Register />
@@ -42,7 +41,6 @@ function Router() {
           <Profile />
         </Route>
         <Redirect to="/" /> {/* Redirect to the LandingPage if no matching route */}
-        
       </Switch>
     </BrowserRouter>
   );
